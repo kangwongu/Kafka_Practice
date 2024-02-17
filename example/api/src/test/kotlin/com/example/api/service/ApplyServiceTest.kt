@@ -51,6 +51,8 @@ class ApplyServiceTest @Autowired constructor(
         }
         latch.await()
 
+        Thread.sleep(5000)
+
         // then
         val result = couponRepository.count()
         assertThat(result).isEqualTo(100)
